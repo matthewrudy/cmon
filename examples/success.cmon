@@ -1,1 +1,7 @@
+# test a shell command
 output_from("echo 'this is going to pass'").should include("pass")
+
+# but any rspec syntax should work
+1.should < 2
+1.should_not be(2)
+"hello world".should include("hello")
