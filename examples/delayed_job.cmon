@@ -1,0 +1,17 @@
+#!/usr/bin/env cmon
+#
+# good messages look like
+#   $ ruby script/delayed_job status
+#   delayed_job: running [pid 8270]
+#
+# bad messages look like
+#   $ ruby script/delayed_job status
+#   delayed_job: no instances running
+# or
+#   $ ruby script/delayed_job status
+#   pid-file for killed process 8270 found (/Users/matthew/code/merlot/tmp/pids/delayed_job.pid), deleting.
+#   delayed_job: no instances running
+#
+# we're going to check there are no bad messages
+#
+output_from("ruby script/delayed_job status").should_not_include("no instances running")
