@@ -1,7 +1,12 @@
 require 'cmon/version'
+require 'rubygems'
 require 'rspec/expectations'
+require 'active_support/core_ext/module/delegation'
 
 module CMon
+  
+  SPEC_OPERATORS = ['==', '===', '=~', '>', '>=', '<', '<=']
+  
   class Command
     def initialize(cmd)
       @command = cmd
@@ -9,16 +14,10 @@ module CMon
     end
     attr_reader :command, :output
     
-    def include?(text)
-      self.output.include?(text)
-    end
+    delegate :include?, :to => :output
     
-    def =~(regexp)
-      self.output =~ regexp
-    end
-    
-    def ==(value)
-      self.output == value
+    SPEC_OPERATORS.each do |operator|
+      delegate operator, :to => :output
     end
     
     def to_s
