@@ -1,0 +1,1 @@
+output_from("echo 'this is going to pass'").should_not_include("fail")

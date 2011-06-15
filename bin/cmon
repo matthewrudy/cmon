@@ -1,13 +1,6 @@
 #!/usr/bin/env ruby
-
-# Check if an older version of bundler is installed
+lib = File.expand_path(File.dirname(__FILE__)+'/../lib/')
+$:.unshift lib unless $:.include?(lib)
 require 'cmon'
 
-puts "cmon test"
-if ARGV[0] == "t"
-  puts "exiting well"
-  exit 0
-else
-  puts "exiting badly"
-  exit 1
-end
+CMon::Runner.run(ARGV[0])
