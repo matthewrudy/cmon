@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Matthew Rudy Jacobs"]
   s.email       = ["matthewrudyjacobs+cmon@gmail.com"]
   s.homepage    = "https://github.com/matthewrudy/com"
-  s.summary     = %q{Monitoring with Cron}
-  s.description = %q{Cron + Monitoring}
+  s.summary     = %q{Cron Enabled Monitoring}
+  s.description = %q{Write a simple monitoring script to be executed by cron, using an rspec-like assertion syntax}
 
   s.required_rubygems_version = ">= 1.3.6"
   
