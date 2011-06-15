@@ -1,0 +1,43 @@
+cmon
+====
+
+Come on.
+I'm bored of installing God
+or Bluepill.
+
+I just want a simple command line interface for checking the state of something.
+
+I want to define my expectations in a simple way
+
+  output_from("ruby script/delayed_job status")\
+    .should_not_include("no instances running")
+
+I want to be able to execute this simply on the command line
+  
+  $ cd /path/to/my/project
+  $ cmon monitoring/delayed_job.cmon
+    
+I want to run this on cron, and have IT email me when things go wrong
+
+  # monitor this once an hour
+  # and email me if its down
+  MAILTO=my.email@example.com
+  0 * * * * cd /path/to/my/project && cmon monitoring/delayed_job.cmon
+  
+And maybe, if it goes wrong, I want it to restart it for me
+
+  0 * * * * cd /path/to/my/project && cmon monitoring/delayed_job.cmon || ruby script/delayed_job restart
+  
+  
+C'mon
+====
+  
+cmon (pronounced "come on") is a simple ruby library that defines it own rspec-like api for defining expectations
+
+It says
+
+  - "if there's anything I can rely upon being up all the time, then its crontab"
+  - "let's use crontabs built in emailing to enable notifications"
+  - "let's return posix exit codes, so we can use bash's logical operators to chain commands, and responses together
+
+  
