@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+# Check if an older version of bundler is installed
+require 'cmon'
+
+puts "cmon test"
+if ARGV[0] == "t"
+  puts "exiting well"
+  exit 0
+else
+  puts "exiting badly"
+  exit 1
+end
