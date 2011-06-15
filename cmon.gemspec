@@ -20,4 +20,6 @@ Gem::Specification.new do |s|
   s.test_files         = Dir.glob("{test/**/*}")
   s.executables        = %w(cmon)
   s.require_paths      = ["lib"]
+  
+  s.add_dependency "rspec", ">= 2.0.0"
 end

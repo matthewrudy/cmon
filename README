@@ -1,4 +1,4 @@
-cmon
+cmon (Cron Monitor?)
 ====
 
 Come on.
@@ -7,10 +7,10 @@ or Bluepill.
 
 I just want a simple command line interface for checking the state of something.
 
-I want to define my expectations in a simple way
+I want to define my expectations in RSpec
 
   output_from("ruby script/delayed_job status")\
-    .should_not_include("no instances running")
+    .should_not include("no instances running")
 
 I want to be able to execute this simply on the command line
   
@@ -32,7 +32,7 @@ And maybe, if it goes wrong, I want it to restart it for me
 C'mon
 ====
   
-cmon (pronounced "come on") is a simple ruby library that defines it own rspec-like api for defining expectations
+cmon (pronounced "come on") is a simple ruby library that uses rspec defining expectations
 
 It says
 

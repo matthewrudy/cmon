@@ -14,4 +14,4 @@
 #
 # we're going to check there are no bad messages
 #
-output_from("ruby script/delayed_job status").should_not_include("no instances running")
+output_from("ruby script/delayed_job status").should_not include("no instances running")

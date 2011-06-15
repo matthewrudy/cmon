@@ -1,1 +1,1 @@
-output_from("echo 'this is going to fail'").should_not_include("fail")
+output_from("echo 'this is going to fail'").should_not include("fail")
