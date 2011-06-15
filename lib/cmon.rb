@@ -1,5 +1,4 @@
 require 'cmon/version'
-require 'rubygems'
 require 'rspec/expectations'
 require 'active_support/core_ext/module/delegation'
 
