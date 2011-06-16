@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Matthew Rudy Jacobs"]
   s.email       = ["matthewrudyjacobs+cmon@gmail.com"]
-  s.homepage    = "https://github.com/matthewrudy/com"
+  s.homepage    = "https://github.com/matthewrudy/cmon"
   s.summary     = %q{Cron Enabled Monitoring}
   s.description = %q{Write a simple monitoring script to be executed by cron, using an rspec-like assertion syntax}
 
